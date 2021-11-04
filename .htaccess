@@ -1,0 +1,14 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+RewriteCond %{HTTPS} !=on   
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+	RewriteCond %{HTTP:Authorization} ^(.*)
+	RewriteRule .* - [e=HTTP_AUTHORIZATION:%1]
+	RewriteCond %{REQUEST_URI} !^public
+RewriteRule ^(.*)$ public/$1 [L]
+Header add Access-Control-Allow-Origin "*"
+Header set Access-Control-Allow-Origin "*"
+Header always set Access-Control-Allow-Methods "POST, GET, OPTIONS, DELETE, PUT"
+Header always set Access-Control-Allow-Headers "My-First-Header,My-Second-Header,Authorization, content-type, csrf-token"
+Header always set Access-Control-Allow-Credentials "true"
+</IfModule>
