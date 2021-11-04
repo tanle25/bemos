@@ -21,6 +21,8 @@ use Artesaos\SEOTools\Facades\JsonLd;
 use Artesaos\SEOTools\Facades\SEOTools;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\URL;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\ProductsExport;
 
 class HomeController extends Controller
 {
@@ -267,5 +269,10 @@ class HomeController extends Controller
         $response = Http::get($url);
         return response()->json($response->json()['data']);
         // dd($response->body());
+    }
+    public function export()
+    {
+        # code...
+        return Excel::download(new ProductsExport, 'product-'.time().'.xlsx');
     }
 }

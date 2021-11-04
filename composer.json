@@ -20,6 +20,8 @@
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.2",
         "laravelium/sitemap": "^8.0",
+        "maatwebsite/excel": "^3.1",
+        "moirei/laravel-google-merchant-api": "^1.1",
         "realrashid/sweet-alert": "^3.2",
         "spatie/laravel-permission": "^4.0",
         "spatie/laravel-webhook-client": "^2.7",
