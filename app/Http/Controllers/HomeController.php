@@ -273,6 +273,6 @@ class HomeController extends Controller
     public function export()
     {
         # code...
-        return Excel::download(new ProductsExport, 'product-'.time().'.xlsx');
+        return Excel::download(new ProductsExport, 'product-'.time().'.tsv');
     }
 }

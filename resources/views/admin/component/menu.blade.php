@@ -171,6 +171,12 @@
               </li>
             </ul>
           </li>
+          <li class="nav-item">
+            <a href="{{url('export-all-product')}}" class="nav-link">
+              <i class="far fa-users nav-icon"></i>
+              <p>Xuất excel tất cả sản phẩm</p>
+            </a>
+          </li>
           {{--
           <li class="nav-header">EXAMPLES</li>
           <li class="nav-item">

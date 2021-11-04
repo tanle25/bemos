@@ -85,6 +85,7 @@ Route::get('category/{slug}',[HomeController::class,'category'])->name('category
 Route::get('shipping-fee', [ViettelPostController::class,'getFee'])->name('shippngFee');
 Route::webhooks('webhook-receiving-url');
 
+Route::get('export-all-product',[HomeController::class,'export']);
 
 //Shipping Caculator
 Route::get('list-province',[HomeController::class,'listProvices']);
@@ -101,4 +102,5 @@ Route::get('vnpay-ipnurl',[OrderController::class,'ipnUrl']);
 
 // Route::get('payment-result',[OrderController::class,'paymentreturn']);
 Route::get('vnpay-url',[OrderController::class,'Vnpay']);
+
 
