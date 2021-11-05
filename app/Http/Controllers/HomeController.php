@@ -275,4 +275,12 @@ class HomeController extends Controller
         # code...
         return Excel::download(new ProductsExport, 'product-'.time().'.tsv');
     }
+
+    public function productExport()
+    {
+        # code...
+        $products = ProductModel::all();
+        // dd($products->category);
+        return view('admin.pages.product.product_export',compact('products'));
+    }
 }

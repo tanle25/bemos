@@ -11,6 +11,7 @@ use App\Http\Controllers\WebsiteConfig;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\ConfigContentController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\RatingController;
@@ -45,7 +46,9 @@ Route::group(['middleware' => 'admin'], function () {
     Route::get('supply',[SupplyAndDemandController::class,'index'])->name('supply.index');
     Route::get('supply/update/{id}',[SupplyAndDemandController::class,'update'])->name('supply.update');
     Route::post('create-order',[ViettelPostController::class,'createViettelOrder'])->name('create.order');
-Route::post('change-order-status',[ViettelPostController::class,'changeStatus'])->name('vt.change.status');
+    Route::get('export-all-product',[HomeController::class,'productExport']);
+
+    Route::post('change-order-status',[ViettelPostController::class,'changeStatus'])->name('vt.change.status');
 
     Route::get('add-voucher',[VoucherController::class,'addVoucher']);
 
