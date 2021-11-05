@@ -46,7 +46,7 @@ Danh sách sản phẩm
                 <td class="d-inline-block text-truncate" style="max-width: 200px">{{$product->short_description}}</td>
                 <td>{{url('detail/'.$product->slug)}}</td>
                 <td>mới</td>
-                <td>{{($product->promotion_price != null) ? $product->promotion_price : $product->price}}</td>
+                <td>{{($product->promotion_price != null) ? $product->promotion_price : $product->price}} vnd</td>
 
                 <td>còn hàng</td>
                 <td>{{$product->avatar}}</td>
