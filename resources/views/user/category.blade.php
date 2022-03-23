@@ -9,11 +9,14 @@
             <ul itemscope="" itemtype="http://schema.org/BreadcrumbList">
                 <li><span> <a href="/"> <span>TRANG CHỦ</span> </a> </span> <span class="delimiter">/</span></li>
                 {{-- @dd($parent) --}}
+                @if ($parent)
                 <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a class="text-uppercase" href="{{route('categorymenu.show',$parent->slug)}}"
                         title="BÀN VĂN PHÒNG" itemprop="item"> <span itemprop="name">{{$parent->name}}</span> </a> <span
                         class="delimiter">/</span>
                     <meta itemprop="position" content="1">
                 </li>
+                @endif
+
                 <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><strong
                         class="current-item text-uppercase" itemprop="name">{{ $category->name }}</strong> <span
                         itemprop="item" itemscope="" itemtype="http://schema.org/Thing" id="/ban-giam-doc-bmg"> </span>

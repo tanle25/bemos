@@ -92,6 +92,7 @@ class HomeController extends Controller
     public function category($slug)
     {
         # code...
+        // dd($slug);
         $categories =CategoryModel::whereSlug($slug)->whereStatus(1)->first()->categories;
         $category = CategoryModel::whereSlug($slug)->whereStatus(1)->first();
         $category_colection = array();

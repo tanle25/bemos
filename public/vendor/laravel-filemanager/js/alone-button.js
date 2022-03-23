@@ -29,19 +29,12 @@
         //     console.log(item);
         // console.log(html);
           target_preview.append(html);
+        //   console.log(target_preview);
         });
 
         // trigger change event
         target_preview.trigger('change');
-        // swiper.reInit();
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 3,
-            spaceBetween: 10,
-            pagination: {
-              el: ".swiper-pagination",
-              clickable: true,
-            },
-          });
+
       };
       return false;
     });

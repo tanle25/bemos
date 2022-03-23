@@ -5,6 +5,7 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
+
 @endsection
 @section('title')
 Thêm sản phẩm
@@ -89,7 +90,7 @@ Thêm sản phẩm
                         <a role="button" class="btn btn-danger" id="clear-image">Clear</a>
                         <input id="thumbnail" type="hidden" name="images" class="form-control"  value="{{$image_string ?? ''}}">
                     </div>
-                    <div class="col-sm-8">
+                    <div class="col-sm-8 overflow-auto">
                         <div class="swiper-container mySwiper">
                             <div class="swiper-wrapper" id="holder">
 
@@ -199,14 +200,22 @@ var route_prefix = "/admin/laravel-filemanager";
 var swiper = new Swiper(".mySwiper", {
         slidesPerView: 3,
         spaceBetween: 10,
+        // loop: true,
+
         pagination: {
           el: ".swiper-pagination",
-          clickable: true,
+          type: "fraction",
+        //   clickable: true,
         },
       });
 $('#clear-image').on('click',function(){
     $('#holder').html('');
     $('#thumbnail').val('');
+});
+
+$(document).on('change','#holder', function(){
+    // console.log('change');
+    swiper.update();
 });
 
 $(document).on('change','#product-name',function(){
