@@ -58,6 +58,7 @@ class CategoryController extends Controller
         $category->parent = $request->parrent;
         $category->status = $request->status == 'on' ? 1 :0;
         $category->color = $request->color;
+        $category->description = $request->desc;
         $category->save();
         return redirect()->route('category.index');
     }
@@ -118,6 +119,7 @@ class CategoryController extends Controller
         $category->parent = $request->parrent;
         $category->status = $request->status =='on' ? 1 : 0;
         $category->color = $request->color;
+        $category->description = $request->desc;
         $category->save();
         Alert::toast('Đã cập nhật danh mục','success');
         return redirect()->route('category.index');

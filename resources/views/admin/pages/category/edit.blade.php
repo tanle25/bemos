@@ -75,6 +75,12 @@ Sửa danh mục
                         @error('slider') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
                 </div>
+                <div class="form-group row">
+                    <label for="slug" class="col-sm-2 col-form-label">Mô tả</label>
+                    <div class="col-sm-10">
+                        <textarea name="desc" id="" cols="30" rows="10">{{$category->description}}</textarea>
+                    </div>
+                </div>
         </div>
     </div>
             <!-- /.card-body -->

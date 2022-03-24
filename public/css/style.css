@@ -561,8 +561,12 @@ input::-webkit-inner-spin-button {
 }
 
 .popular-right-colunm {
-    height: 500px;
+    /* height: 500px; */
     overflow-y: auto;
+}
+.col-3.popular-right-colunm img {
+    height: 100%;
+    object-fit: contain;
 }
 
 .image-inner img {

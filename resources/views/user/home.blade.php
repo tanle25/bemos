@@ -161,7 +161,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col-3 popular-right-colunm h-100">
+                        <div class="col-3 popular-right-colunm">
                             <img class="mh-100 w-100 lazy"
                                 data-src="{{ asset($categories->where('name', $catagory_name)->first()->banner) }}"
                                 alt="{{ $catagory_name }}">
