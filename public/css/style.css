@@ -233,7 +233,7 @@ input::-webkit-inner-spin-button {
 
 .border-top-width {
     width: 90%;
-    height: 20px;
+    /* height: 20px; */
     margin: 0 auto;
     border-top: 2px solid #ea212d;
 }
@@ -247,7 +247,7 @@ input::-webkit-inner-spin-button {
 
 .border-top-width {
     width: 97%;
-    height: 20px;
+    /* height: 20px; */
     margin: 0 auto;
 }
 
@@ -565,7 +565,11 @@ input::-webkit-inner-spin-button {
     overflow-y: auto;
 }
 .popular-right-colunm img {
-    height: max-content;
+    height: 500px;
+    object-fit: cover;
+}
+.product-link img{
+    height: 150px;
     object-fit: cover;
 }
 
