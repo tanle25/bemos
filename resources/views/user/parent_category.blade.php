@@ -70,6 +70,7 @@
                 </div>
             @endforeach
         </div>
+        <div class="row">{{$featureds->links()}}</div>
         <div class="content category-description">
 
             {{-- @dd($category) --}}

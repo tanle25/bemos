@@ -131,7 +131,7 @@ class HomeController extends Controller
         if($categories->first() != null){
         // dd($category);
             $category_description = $category->description;
-            $featureds = ProductModel::whereFeatured(1)->orderBy('updated_at','desc')->whereStatus(1)->take(8)->get();
+            $featureds = ProductModel::whereFeatured(1)->orderBy('updated_at','desc')->whereStatus(1)->paginate(8);
             return view('user.parent_category',compact('categories','category','featureds','category_description'));
         }else{
             $parent = CategoryModel::find($category->parent);
