@@ -433,6 +433,7 @@ input::-webkit-inner-spin-button {
 #navbarTogglerDemo03 .parent-category {
     height: 100%;
     display: flex;
+    font-weight: 600;
     flex-direction: column;
     justify-content: center;
 }
