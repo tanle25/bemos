@@ -565,7 +565,7 @@ input::-webkit-inner-spin-button {
     overflow-y: auto;
 }
 .popular-right-colunm img {
-    height: 100%;
+    height: max-content;
     object-fit: cover;
 }
 
