@@ -78,7 +78,7 @@ Thêm danh mục
                 <div class="form-group row">
                     <label for="slug" class="col-sm-2 col-form-label">Mô tả</label>
                     <div class="col-sm-10">
-                        <textarea name="desc" id="" cols="30" rows="10"></textarea>
+                        <textarea name="desc" class="form-control" id=""  rows="5"></textarea>
                     </div>
                 </div>
         </div>

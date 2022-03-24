@@ -78,7 +78,7 @@ Sửa danh mục
                 <div class="form-group row">
                     <label for="slug" class="col-sm-2 col-form-label">Mô tả</label>
                     <div class="col-sm-10">
-                        <textarea name="desc" id="" cols="30" rows="10">{{$category->description}}</textarea>
+                        <textarea name="desc" class="form-control" id="" rows="5">{{$category->description}}</textarea>
                     </div>
                 </div>
         </div>
